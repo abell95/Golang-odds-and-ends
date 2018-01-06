@@ -8,8 +8,6 @@ import (
 
 //only creates all-caps emails- variable lettering tbd
 func randomEmail(nLength int, host, suffix string) string {
-	rand.Seed(time.Now().UTC().UnixNano())
-	
 	bytes := []byte{}
 	randEmail := ""
 	
@@ -30,7 +28,8 @@ func randomEmail(nLength int, host, suffix string) string {
 }
 
 func main() {
+	rand.Seed(time.Now().UTC().UnixNano())
 	fmt.Println(randomEmail(12, "yahoo", "com"))
 	fmt.Println(randomEmail(8, "bigbusiness", "net"))
-    fmt.Println(randomEmail(22, "contractor", "gov"))
+    	fmt.Println(randomEmail(22, "contractor", "gov"))
 }
