@@ -5,6 +5,7 @@ import (
 )
 
 //function returns integer in a slice that appears the most consecutive times
+//In the event of a tie it returns the first one of the equivalent streak
 //Returns -1 if there are no consecutive integers
 func longestConsecutiveInt(arr []int) int {
 	consec := 0
