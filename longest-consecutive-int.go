@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-//function returns integer in an array that appears the most consecutive times
+//function returns integer in a slice that appears the most consecutive times
 //Returns -1 if there are no consecutive integers
 func longestConsecutiveInt(arr []int) int {
 	consec := 0
