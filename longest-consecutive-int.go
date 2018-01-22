@@ -19,7 +19,7 @@ func longestConsecutiveInt(arr []int) int {
 				maxCtr = ctr
 				maxNum = temp
 			}
-			ctr = 0
+			ctr = 1
 		} else {
 			ctr++
 		}
