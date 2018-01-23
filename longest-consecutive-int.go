@@ -4,10 +4,11 @@ import (
 	"fmt"
 )
 
-//function returns integer in a slice that appears the most consecutive times
+//function returns integer in a slice that appears the most consecutive times,
+//followed the number of consecutive times it appeared
 //In the event of a tie it returns the first one of the equivalent streak
-//Returns -1 if there are no consecutive integers
-func longestConsecutiveInt(arr []int) int {
+//Returns -1, -1 if there are no consecutive integers
+func longestConsecutiveInt(arr []int) (int, int) {
 	consec := 0
 	ctr := 0
 	maxCtr := 0
@@ -26,9 +27,10 @@ func longestConsecutiveInt(arr []int) int {
 		}
 	}
 	if maxCtr <= 1 {
-		return -1
+		return -1, -1
+	} else {
+		return maxNum, maxCtr
 	}
-	return maxNum
 }
 
 func main() {
