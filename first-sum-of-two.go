@@ -11,7 +11,7 @@ func sumFinder(nums []int, target int) []int {
 		numChecker[i] = x
 		for j := 0; j < len(numChecker); j++ {
 			if nums[i] + numChecker[j] == target {
-				answer = append(answer, nums[i], numChecker[j])
+				answer = append(answer, numChecker[j], nums[i])
 				return answer
 			}
 		}
@@ -21,7 +21,6 @@ func sumFinder(nums []int, target int) []int {
 
 
 func main() {
-	fmt.Println("Hello, playground")
 	s := []int{1, 5, 8, 19, 4, 12, 6, 7, 14, 42}
-	fmt.Println(sumFinder(s, 15))
+	fmt.Println(sumFinder(s, 17)) // will return 5, 12
 }
