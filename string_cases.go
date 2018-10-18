@@ -28,7 +28,7 @@ func lowercaser (s string) string {
 	return newStr
 }
 
-// doesn't handle special characters or numbers
+// ignores special characters and numbers
 func altercaser (s string) string {
 	newStr := ""
 	capital := true
